@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-color: #5d5a5a;
+        }
+        #chat-container {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column-reverse; 
+        }
+        .message {
+            white-space: pre-wrap;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .user-message {
+            align-self: flex-end;
+            background-color: #4ac885;
+        }
+        #loading {
+            display: none;
+        }
+        #prompt-form {
+            display: flex;
+            margin: 10px;
+        }
+        #prompt-input {
+            flex-grow: 1;
+            padding: 10px;
+            margin-right: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #01481e;
+            color: white;
+            cursor: pointer;
+        }
+        #title-bar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+        #title-bar img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        #loading-wheel {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #99f1ab;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div id="title-bar">
+        <img src="data:image/jpeg;base64,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" alt="Logo">
+        <span>Dhir's Chatbot</span>
+    </div>
+    <div id="chat-container">
+        
+    </div>
+    <form id="prompt-form">
+        <input type="text" id="prompt-input" placeholder="Ask me a question! (ie: Tell me about Dhir's work experience.)">
+        <button type="submit">Send</button>
+    </form>
+    <div id="loading-wheel"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var socket = new WebSocket('ws://' + window.location.host + '/ws/model/');
+            var chatContainer = document.getElementById('chat-container');
+            var loadingWheel = document.getElementById('loading-wheel');
+            var currentResponseDiv = null;
+
+            socket.onopen = function(e) {
+                loadingWheel.style.display = 'none';
+            };
+
+            socket.onmessage = function(event) {
+                var data = JSON.parse(event.data);
+                loadingWheel.style.display = 'none';
+
+                if (data.response === 'END') {
+                    currentResponseDiv = null;
+                } else {
+                    if (!currentResponseDiv) {
+                        currentResponseDiv = document.createElement('div');
+                        currentResponseDiv.classList.add('message');
+                        chatContainer.insertBefore(currentResponseDiv, chatContainer.firstChild);
+                    }
+                    currentResponseDiv.innerHTML += data.response.replace(/\n/g, '<br>');
+                }
+            };
+
+            socket.onclose = function(e) {
+                console.error('WebSocket closed unexpectedly');
+            };
+
+            document.querySelector('#prompt-form').onsubmit = function(e) {
+                var promptInput = document.querySelector('#prompt-input');
+                var message = { prompt: promptInput.value };
+                var userMessageDiv = document.createElement('div');
+                userMessageDiv.classList.add('message', 'user-message');
+                userMessageDiv.textContent = promptInput.value;
+                chatContainer.insertBefore(userMessageDiv, chatContainer.firstChild);
+                socket.send(JSON.stringify(message));
+                promptInput.value = '';
+                e.preventDefault();
+                loadingWheel.style.display = 'block';
+                currentResponseDiv = null;
+            };
+        });
+    </script>
+</body>
+</html>

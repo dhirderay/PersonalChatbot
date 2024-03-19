@@ -1,0 +1,85 @@
+
+Personal Information:
+Name: Dhir DeRay
+
+Location: Atlanta, Georgia 
+
+Email: dhirderay@gmail.com 
+
+LinkedIn: https://www.linkedin.com/in/dhirderay
+
+EDUCATION
+GEORGIA INSTITUTE OF TECHNOLOGY, Scheller College of Business		
+Atlanta, Georgia
+Bachelor of Science in Business Administration							         Graduation date: May 2025
+Concentration: Finance
+Minor: Mandarin Chinese	
+Study Abroad: Georgia Tech Europe 
+Zell Miller Scholarship, Dean’s List, Faculty Honors 
+
+EXPERIENCE:
+
+Company: EATS365 
+
+Location: Hong Kong
+
+Position: Financial Analyst Intern (Present)
+			
+Dates Employed: January - May 2024
+
+Company Description: Software development firm focused on providing point of sales solutions in the food and beverage industry
+
+Duties performed/Experience: Conduct database analytics, focusing on consolidating financial data to empower merchant decision-making. Join and analyze disparate database tables, utilizing tools such as MySQL and Python/Pandas, to extract key insights like product profitability, sales contributors, and time-based product sales trends. Create insightful data visualizations using Tableau, effectively communicating complex financial data and trends to aid in strategic planning and operational improvements. Lead the implementation of an advanced chatbot feature, integrating a local instance of an open-source LLM (Llama 2) with Langchain and Python. This feature leverages natural language processing to query the database and deliver insights in an accessible, conversational format.
+
+
+
+
+Company: DIMIOUR
+				
+Location: Atlanta, Georgia
+
+Position: Data Analysis Intern	
+		
+Dates Employed: May - August 2022
+
+Company Description: IT services and consulting firm providing digital solutions in Automotive, Manufacturing, Energy & Utilities, and Healthcare
+
+Duties Performed/Experience: Assisted in collecting and analyzing data to identify trends, patterns, and insights within the organization. Utilized statistical software such as R and Python to perform quantitative analysis on collected data. Collaborated on a project that improved data collection methods, leading to an increase in data quality Recognized for creating an impactful data visualization dashboard that significantly improved the team's understanding of a complex data set.
+
+
+
+Company: MASTECH INFOTRELLIS
+			
+Location: Atlanta, Georgia
+
+Position:Data Analysis Intern
+
+Dates Employed: August 2020 - May 2021
+
+Company Description:Global provider of strategic consulting services specializing in comprehensive IT strategy and cutting-edge Data Modernization solutions.
+
+Duties Performed/Experience: Removed statistical inconsistencies and formatted data using Python. Assisted in the creation of dashboards and other data visualization tools using data visualization software such as Tableau. Completed a Tableau certification course
+
+OTHER WORK:
+
+Position: Welder
+
+Work Type: Freelance 
+
+Location: Georgia
+
+Job Description:MIG and Self-shielded welding techniques
+
+Dates: August 2020 - Present
+
+Duties Performed/Experience: Worked on 2 large-scale dock repair projects, using flux core MIG welding to repair extensive storm damage. Completed welding projects for automotive modification, restoration, and custom furniture design. Learned basic 3d modeling and CAD skills
+
+SKILLS/INTERESTS:
+
+Languages: Bengali – native, Hindi – native, English – native, Spanish – fluent, Mandarin Chinese – Limited proficiency 
+
+Technology: LLM implementation and fine-tuning, R, Python, PHP, SQL, Java, Tableau, Power BI, Excel, MS Office, Strong Interpersonal Skills 
+
+Affiliations & Volunteering: Phi Delta Theta Fraternity, Books for Africa, Ronald McDonald House, Live Like Lou Foundation
+
+Interests: Automotive Restoration, Custom Furniture Design, Travel
