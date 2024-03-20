@@ -113,6 +113,7 @@ starlette==0.35.1
 sympy==1.12
 tenacity==8.2.3
 tokenizers==0.15.1
+torch==2.2.0
 tqdm==4.66.1
 transformers==4.38.1
 Twisted==23.10.0
