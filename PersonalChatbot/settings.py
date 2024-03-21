@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [".awsapprunner.com", "18.116.74.135" ]
 # Application definition
 
 INSTALLED_APPS = [
+    'ChatbotAssistant.apps.ChatbotassistantConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
