@@ -21,4 +21,4 @@ class ModelConsumer(AsyncWebsocketConsumer):
         await self.send(text_data=json.dumps({'response': 'END'}))
 
 def index(request):
-    return render(request, 'index/PersonalChatbot.html')
+    return render(request, 'ChatbotAssistant/PersonalChatbot.html')
